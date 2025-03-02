@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 50px;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    color: #333;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+#reflectButton {
+    background-color: #6a0572;
+    color: white;
+}
+#timeMessage {
+    background-color: #ff6f61;
+    color: white;
+}
+#calculator {
+    margin-top: 20px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+input {
+    padding: 10px;
+    margin: 5px;
+    width: 80px;
+}

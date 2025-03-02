@@ -1,0 +1,101 @@
+/* resume.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff69b4, #800080); /* Pink to Purple Gradient */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.resume-container {
+    background-color: white; /* White background for content */
+    width: 90%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.resume-container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    color: #800080; /* Purple */
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #800080; /* Purple */
+    font-size: 22px;
+    border-bottom: 2px solid #800080;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.section {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.skill {
+    background: #ff69b4; /* Hot pink */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.skill:hover {
+    background: #800080; /* Purple */
+}
+
+.contact {
+    background: #800080; /* Purple */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .skill {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

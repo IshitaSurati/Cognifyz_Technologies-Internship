@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery & Slider</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="./img/img-1.webp" onclick="showSlide(0)">
+        <img src="./img/img-2.webp" onclick="showSlide(1)">
+        <img src="./img/img-3.webp" onclick="showSlide(2)">
+        <img src="./img/img-4.webp" onclick="showSlide(3)">
+        <img src="./img/img-5.webp" onclick="showSlide(4)">
+        <img src="./img/img-6.webp" onclick="showSlide(5)">
+    </div>
+    
+    <div class="slider">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slides">
+            <img src="./img/img-1.webp">
+            <img src="./img/img-2.webp">
+            <img src="./img/img-3.webp">
+            <img src="./img/img-4.webp">
+            <img src="./img/img-5.webp">
+            <img src="./img/img-6.webp">
+            <img src="./img/img-1.webp">
+            <img src="./img/img-2.webp">
+            <img src="./img/img-3.webp">
+            <img src="./img/img-4.webp">
+            <img src="./img/img-5.webp">
+            <img src="./img/img-6.webp">
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slides img').length;
+
+        function moveSlide(step) {
+            currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+            updateSlider();
+        }
+        
+        function showSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>
