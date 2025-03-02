@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/",(req,res)=>{
-   send.res("Welcome to backend");
+   res.send("Welcome to backend");
     
 })
 app.use("/api/internships", internshipRoutes);
